@@ -52,7 +52,7 @@ function App() {
     setSelectedArea('')
     setSelectedName('')
     setSelectedCategory(e.currentTarget.textContent)
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${e.target.textContent}`)
+    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${e.currentTarget.textContent}`)
     setMeals(response.data.meals)
   }
 
@@ -60,7 +60,7 @@ function App() {
     setSelectedCategory('')
     setSelectedName('')
     setSelectedArea(e.currentTarget.textContent)
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${e.target.textContent}`)
+    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${e.currentTarget.textContent}`)
     setMeals(response.data.meals)
   }
 
